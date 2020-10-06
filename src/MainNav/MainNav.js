@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './MainNav.css'
 
 export default class MainNav extends React.Component {
@@ -6,11 +7,11 @@ export default class MainNav extends React.Component {
     return (
       <nav role="navigation">
         <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="members.html">Members</a></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
+          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/gallery'>Gallery</Link></li>
+          <li><Link to='/members'>Members</Link></li>
         </ul>
       </nav>
     )
