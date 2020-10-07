@@ -6,7 +6,7 @@ export default class MainNav extends React.Component {
   render() {
     return (
       <nav role="navigation">
-        <ul class="navbar">
+        <ul className="navbar">
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/contact'>Contact</Link></li>
           <li><Link to='/about'>About</Link></li>
