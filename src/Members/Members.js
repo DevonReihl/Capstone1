@@ -24,8 +24,7 @@ export default class Members extends React.Component {
                 {member.gishname}
               </Link>
               <button>View member Info</button>
-            </li>
-            
+            </li> 
           )}
         </ul>
       </section>

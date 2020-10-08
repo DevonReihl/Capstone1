@@ -5,9 +5,11 @@ import Header from '../Header/Header'
 import About from '../About/About'
 import Todo from '../Todo/Todo'
 import Members from '../Members/Members'
+import ListItems from '../ListItems/ListItems'
 import Gallery from '../Gallery/Gallery'
 import Footer from '../Footer/Footer'
 import HomeImage from '../HomeImage/HomeImage'
+import MemberInfo from '../MemberInfo/MemberInfo'
 import ApiContext from '../ApiContext'
 import config from '../config'
 
@@ -18,7 +20,7 @@ class App extends Component {
     items: [],
   }
 
-  componentsDidMount() {
+  componentDidMount() {
     Promise.all([
       fetch(`${config.API_ENDPOINT}/items`),
       fetch(`${config.API_ENDPOINT}/members`),
@@ -30,7 +32,7 @@ class App extends Component {
           return membersRes.json().then(e => Promise.reject(e))
         return Promise.all([
           itemsRes.json(),
-          membersRes.json(),
+          membersRes.json()
         ])
       })
       .then(([items, members]) => {
@@ -56,9 +58,11 @@ class App extends Component {
           <Header />
           <Route exact path='/' component= {HomeImage} />
           <Route path='/about' component= {About} />
-          <Route path='/gallery' component= {Gallery} />
+          <Route path='/gallery' component= {Gallery} />    
           <Route exact path='/members' component= {Members} />
+          <Route exact path='/items' component= {ListItems} />   
           <Route path='/members/todo' component= {Todo} />
+          <Route path='/members/:memberId' component= {MemberInfo} />
           
         </main>
         <Footer />
