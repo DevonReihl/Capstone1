@@ -36,7 +36,7 @@ class App extends Component {
         ])
       })
       .then(([items, members]) => {
-        this.setState({ items, members })
+        this.setState({ items, members })    
       })
       .catch(error => {
         console.error({ error })

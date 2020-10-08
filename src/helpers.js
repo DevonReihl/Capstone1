@@ -3,9 +3,9 @@ export const findMember = (members=[], memberId) => {
 }
 
 export const findItem = (items=[], itemId) => {
-  items.find(item => item.id == itemId)
+  items.find(item => item.id === itemId)
 }
 
 export const getItemsForMember = (items=[], memberId) => (
-  (!memberId) ? items : items.filter(item => item.memberId == memberId)
+  (!memberId) ? items : items.filter(item => item.memberid == memberId)
 )

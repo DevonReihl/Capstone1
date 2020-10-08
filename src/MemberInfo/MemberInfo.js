@@ -15,12 +15,9 @@ export default class MemberInfo extends React.Component {
 
 
   render() {
-    const { members=[] } = this.context
     const { memberId } = this.props.match.params
-    const member = findMember(members, memberId) || { content: '' }
-    console.log('THIS IS THE MEMBERS', members)
-    console.log('THIS IS THE MEMBER ID', memberId)
-    console.log('THIS IS THE MEMBER', member)
+    // const member = findMember(this.context.members, Number(this.props.match.params.memberId)) || { content: '' }
+    const member = this.context.members.find(mem => mem.id == memberId) || { content: '' }
     return (
       <section key={member.id}>
         <div>
@@ -28,10 +25,11 @@ export default class MemberInfo extends React.Component {
         </div>
         <ul>
             <li >
-                {member.fullname}
-                {member.phone}
+              <div>{member.fullname}</div>
+              <div>{member.phone}</div>
+              <button>Update Member</button>     
             </li> 
-            <button>Update Member</button>
+            
         </ul>
       </section>
     )
