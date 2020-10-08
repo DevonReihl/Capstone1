@@ -11,7 +11,6 @@ import JensenPie from './images/JensenPie.jpg'
 import fishingForComplements from './images/fishingForComplements.jpg'
 import ClootieDumpling from './images/ClootieDumpling.jpg'
 // import dogsInSpace from './images/dogsInSpac.jpg'
-import MishaCollins from './images/MishaCollins.jpg'
 import officePaperWeddingDress from './images/officePaperWeddingDress.jpg'
 import './Gallery.css'
 
@@ -20,11 +19,8 @@ export default class Gallery extends React.Component {
     return (
       <section>
         <div className="gallery">
-            <img src={MishaCollins} alt="GISH"/>
-        </div>
-        <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/jn5XrI-CuWE" allowFullScreen/>
-          <div className="desc">Add a description of the image here</div>
+          <div className="desc"></div>
         </div>
         <div className="gallery">
             <img src={officePaperWeddingDress} alt="GISH"/>
@@ -55,7 +51,7 @@ export default class Gallery extends React.Component {
             <img src={JensenPie} alt="GISH"/>
           <div className="desc">Pie crust portrait of Jensen Ackles</div>
         </div>
-        <div classNameName="gallery">
+        <div className="gallery">
           <Iframe url="fill in" allowfullscreen/>
           <div className="desc">Zipper egg</div>
         </div>
@@ -63,7 +59,7 @@ export default class Gallery extends React.Component {
             <img src={teamPortrait} alt="GISH"/>
           <div className="desc">Team Literacy Bandits at there finest</div>
         </div>
-        <div classNameName="gallery">
+        <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/GCWwyJbiOJI" allowfullscreen/>
           <div className="desc"></div>
         </div>
@@ -71,7 +67,7 @@ export default class Gallery extends React.Component {
             <img src={toastedMarshmellowArt} alt="GISH"/>
           <div className="desc">Jared Padalecki burnt into a marshmellow</div>
         </div>
-        <div classNameName="gallery">
+        <div className="gallery">
           <Iframe url="fill in" allowfullscreen/>
           <div className="desc">Add a description of the image here</div>
         </div>
@@ -79,14 +75,14 @@ export default class Gallery extends React.Component {
             <img src={fishingForComplements} alt="GISH"/>
           <div className="desc">Fishing for complements</div>
         </div>
-        <div classNameName="gallery">
+        <div className="gallery">
           <Iframe url="fill in" allowfullscreen/>
           <div className="desc">Add a description of the image here</div>
         </div>
         <div className="gallery">
             <img src={ClootieDumpling} alt="GISH"/>
         </div>
-        <div classNameName="gallery">
+        <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/i_7cvm-gYyg" allowfullscreen/>
           <div className="desc">Add a description of the image here</div>
         </div>
