@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ApiContext from '../ApiContext'
-import { findMember } from '../helpers'
 
 import './MemberInfo.css'
 
@@ -16,7 +16,6 @@ export default class MemberInfo extends React.Component {
 
   render() {
     const { memberId } = this.props.match.params
-    // const member = findMember(this.context.members, Number(this.props.match.params.memberId)) || { content: '' }
     const member = this.context.members.find(mem => mem.id == memberId) || { content: '' }
     return (
       <section key={member.id}>
@@ -27,7 +26,10 @@ export default class MemberInfo extends React.Component {
             <li >
               <div>{member.fullname}</div>
               <div>{member.phone}</div>
-              <button>Update Member</button>     
+              <Link
+              to={`/members/edit/${member.id}`}
+              >
+                <button>Update Member</button></Link>     
             </li> 
             
         </ul>

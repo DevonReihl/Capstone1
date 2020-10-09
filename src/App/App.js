@@ -10,6 +10,8 @@ import Gallery from '../Gallery/Gallery'
 import Footer from '../Footer/Footer'
 import HomeImage from '../HomeImage/HomeImage'
 import MemberInfo from '../MemberInfo/MemberInfo'
+import EditMember from '../EditMember/EditMember'
+import AddItem from '../AddItem/AddItem'
 import ApiContext from '../ApiContext'
 import config from '../config'
 
@@ -45,10 +47,27 @@ class App extends Component {
   
   //handle functions
 
+  //add member
+
+  //update member
+  // updateMember: () => {}
+  //update item
+
+  //delete item
+  deleteItem = memberId => {
+    this.setState({
+      items: this.state.items.filter(item => item.id !== memberId)
+    })
+  }
+
   render(){
     const value = {
       members: this.state.members,
-      items: this.state.items
+      items: this.state.items,
+      addItem: this.addItem,
+      deleteItem: this.deleteItem,
+      updateItem: this.updateItem,
+      updateMember: this.updateMember,
     }
 
     return (
@@ -61,8 +80,10 @@ class App extends Component {
           <Route path='/gallery' component= {Gallery} />    
           <Route exact path='/members' component= {Members} />
           <Route exact path='/items' component= {ListItems} />   
-          <Route path='/members/todo' component= {Todo} />
-          <Route path='/members/:memberId' component= {MemberInfo} />
+          <Route path='/members/:memberId/todo' component= {Todo} />
+          <Route exact path='/members/:memberId' component= {MemberInfo} />
+          <Route path='/members/edit/:memberId' component= {EditMember} />
+          <Route path='/items/add' component= {AddItem} />
           
         </main>
         <Footer />

@@ -19,11 +19,14 @@ export default class Members extends React.Component {
             <li key={member.id}>
               <Link
                 className='member-link'
-                to={`/members/todo`}
+                to={`/members/${member.id}/todo`}
               >
-                {member.gishname}
+                <h1>{member.gishname}</h1>
               </Link>
-              <button>View member Info</button>
+              <Link to={`/members/${member.id}`}>
+                <button>View member info</button>
+                {/* View member info */}
+              </Link>
             </li> 
           )}
         </ul>

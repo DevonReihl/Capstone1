@@ -7,5 +7,5 @@ export const findItem = (items=[], itemId) => {
 }
 
 export const getItemsForMember = (items=[], memberId) => (
-  (!memberId) ? items : items.filter(item => item.memberid == memberId)
+  (!memberId) ? items : items.filter(item => item.memberId == memberId)
 )
