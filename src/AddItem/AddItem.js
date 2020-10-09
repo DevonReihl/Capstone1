@@ -4,33 +4,42 @@ import ApiContext from '../ApiContext'
 import './AddItem.css'
 
 export default class AddItem extends React.Component {
-  static contextType = ApiContext;
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
 
-  handleAddMember = e => {
+  handleAddItem = e => {
     e.preventDefault()
-    console.log('YOU CAN UPDATE NOW')
+    const newItem = {
+      itemName: e.target['itemName'].value,
+      itemText: e.target['itemText'].value,
+      pointsValue: e.target['pointValue'].value,
+      itemType: e.target['itemType'].value,
+    }
+    console.log(newItem)
   }
 
   render() {
-    // const { memberId } = this.props.match.params
+    // const { items=[] } = this.context
 
     return (
       <form>
         <h2>Update your info</h2>
         <div>
-          <label htmlFor='itemName'>Item name</label>
-          <input type='text' name='itemName'/>
+          <label htmlFor='itemName-input'>Item name</label>
+          <input type='text' name='itemName' value={this.state.value} />
         </div>
         <div>
-          <label htmlFor='itemText'>Item Description</label>
+          <label htmlFor='itemText-input'>Item Description</label>
           <input type='text' name='itemText'/>
         </div>
         <div>
-          <label htmlFor='pointValue'>Item Points</label>
+          <label htmlFor='pointValue-input'>Item Points</label>
           <input type='text' name='pointValue'/>
         </div>
         <div>
-          <label htmlFor='itemType'>Item Type</label>
+          <label htmlFor='itemType-input'>Item Type</label>
           <input type='text' name='itemType'/> 
           {/* Might switch to radio buttons */}
         </div>
@@ -38,7 +47,7 @@ export default class AddItem extends React.Component {
         <button type='reset'>
             Cancel
         </button>
-        <button type='button' onClick={this.handleAddMember}>
+        <button type='button' onClick={this.handleAddItem}>
             Save
         </button>
        </div>

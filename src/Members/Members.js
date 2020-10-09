@@ -15,6 +15,7 @@ export default class Members extends React.Component {
           <h2> TEAM members</h2>
         </div>
         <ul>
+          
           {members.map(member =>
             <li key={member.id}>
               <Link
@@ -29,7 +30,11 @@ export default class Members extends React.Component {
               </Link>
             </li> 
           )}
+          
         </ul>
+        <Link to={`/add-member`}>
+            <button>Add member</button>
+        </Link>
       </section>
     )
   }

@@ -1,22 +1,43 @@
 import React from 'react'
 import ApiContext from '../ApiContext'
-// import config from '../config'
+import config from '../config'
 import './AddMember.css'
 
-export default class EditMember extends React.Component {
+export default class AddMember extends React.Component {
   static contextType = ApiContext;
 
   handleAddMember = e => {
     e.preventDefault()
-    console.log('YOU CAN UPDATE NOW')
+    const newMember = {
+      gishname: e.target.gishname.value,
+      fullname: e.target.fullname.value, 
+      phone: e.target.phone.value,
+    }
+    console.log('YOU CAN ADD NOW', newMember)
+    fetch(`${config.API_ENDPOINT}/members`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newMember)
+    })
+    .then(res => {
+      if(!res.ok)
+      return res.json().then(e => Promise.reject(e))
+    })
+    .then(member => {
+      this.context.addMember(member)
+    })
+    .catch(error => {
+      console.error({ error })
+    })
   }
 
   render() {
-    // const { memberId } = this.props.match.params
 
     return (
-      <form>
-        <h2>Update your info</h2>
+      <form  onSubmit={this.handleAddMember}>
+        <h2>Add new member</h2>
         <div>
           <label htmlFor='gishname'>Gish Name</label>
           <input type='text' name='gishname'/>
@@ -33,7 +54,7 @@ export default class EditMember extends React.Component {
         <button type='reset'>
             Cancel
         </button>
-        <button type='button' onClick={this.handleAddMember}>
+        <button type='submit'>
             Save
         </button>
        </div>

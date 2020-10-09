@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import MainNav from '../MainNav/MainNav'
 import Header from '../Header/Header'
@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer'
 import HomeImage from '../HomeImage/HomeImage'
 import MemberInfo from '../MemberInfo/MemberInfo'
 import EditMember from '../EditMember/EditMember'
+import AddMember from '../AddMember/AddMember'
 import AddItem from '../AddItem/AddItem'
 import ApiContext from '../ApiContext'
 import config from '../config'
@@ -50,13 +51,21 @@ class App extends Component {
   //add member
 
   //update member
-  // updateMember: () => {}
+  updateMember = member => {
+    const newMembers = this.state.members.map(mem =>
+      (mem.id == member.id)
+      ? member : mem)
+      this.setState({
+        members: newMembers
+      })
+  };
+
   //update item
 
   //delete item
-  deleteItem = memberId => {
+  deleteItem = itemId => {
     this.setState({
-      items: this.state.items.filter(item => item.id !== memberId)
+      items: this.state.items.filter(item => item.id !== itemId)
     })
   }
 
@@ -80,10 +89,11 @@ class App extends Component {
           <Route path='/gallery' component= {Gallery} />    
           <Route exact path='/members' component= {Members} />
           <Route exact path='/items' component= {ListItems} />   
-          <Route path='/members/:memberId/todo' component= {Todo} />
+          <Route exact path='/members/:memberId/todo' component= {Todo} />
           <Route exact path='/members/:memberId' component= {MemberInfo} />
-          <Route path='/members/edit/:memberId' component= {EditMember} />
+          <Route exact path='/members/edit/:memberId' component= {EditMember} />
           <Route path='/items/add' component= {AddItem} />
+          <Route path='/add-member' component= {AddMember} />
           
         </main>
         <Footer />

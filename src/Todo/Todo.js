@@ -11,28 +11,28 @@ export default class Todo extends React.Component {
   }
   static contextType = ApiContext;
 
-  handleClickDelete = e => {
+  handleClickDelete = (e, itemid) => {
     e.preventDefault()
-    // const itemId = this.props.id
-    console.log('HELP ME DELETE?!?')
+    console.log('HELP ME DELETE?!?', itemid)
 
-    // fetch(`${config.API_ENDPOINT}/members/:memberId/todo/${itemId}`, {
-    //   method: 'DELETE',
-    //   headers: {
-    //     'content-type': 'application/json'
-    //   },
-    // })
-    // .then(res => {
-    //   if(!res.ok)
-    //     return res.json().then(e => Promise.reject(e))
-    // })
-    // .then(() => {
-    //   this.context.deleteItem(itemId)
-    //   this.props.onDeleteItem(itemId)
-    // })
-    // .catch(error => {
-    //   console.error({ error })
-    // })
+    fetch(`${config.API_ENDPOINT}/items/${itemid}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+    .then(res => {
+      if(!res.ok)
+        return res.json().then(e => Promise.reject(e))
+        // return res.json()
+    })
+    .then(() => {
+      this.context.deleteItem(itemid)
+      // this.onDeleteItem(itemid)
+    })
+    .catch(error => {
+      console.error({ error })
+    })
   }
 
   render() {
@@ -55,7 +55,7 @@ export default class Todo extends React.Component {
               <button
               className='Item-delete'
               type='button'
-              onClick={this.handleClickDelete}>
+              onClick= { e => this.handleClickDelete(e, item.id)}>
                 Delete
               </button><hr/> 
             </li>
