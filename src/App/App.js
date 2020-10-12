@@ -49,7 +49,14 @@ class App extends Component {
   //handle functions
 
   //add member
-
+  addMember = member => {
+    this.setState({
+      members: [
+        ...this.state.members,
+        member
+      ]
+    })
+  }
   //update member
   updateMember = member => {
     const newMembers = this.state.members.map(mem =>
@@ -74,6 +81,7 @@ class App extends Component {
       members: this.state.members,
       items: this.state.items,
       addItem: this.addItem,
+      addMember: this.addMember,
       deleteItem: this.deleteItem,
       updateItem: this.updateItem,
       updateMember: this.updateMember,

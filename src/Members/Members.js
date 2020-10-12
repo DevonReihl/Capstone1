@@ -16,7 +16,7 @@ export default class Members extends React.Component {
         </div>
         <ul>
           
-          {members.map(member =>
+          {members.map((member) =>
             <li key={member.id}>
               <Link
                 className='member-link'

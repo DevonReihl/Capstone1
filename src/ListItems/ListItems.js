@@ -26,7 +26,7 @@ export default class Todo extends React.Component {
               <div>Item desc: {item.itemText}</div>
               <div>Item type: {item.itemType}</div>
               <div>Points: {item.points}</div>
-              <button>Add Item to my list</button><hr/> 
+              {/* <button>Add Item to my list</button><hr/>  */}
             </li>
           )}
         </ul>

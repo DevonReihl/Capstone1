@@ -9,10 +9,6 @@ export default class EditMember extends React.Component {
   } 
   static contextType = ApiContext;
 
-  componentDidMount () {
-    console.log(this.props.match.params.memberId)
-  }
-
   handleUpdateMember = (e, memberid) => {
     e.preventDefault()
     const memberEdit = {
@@ -20,7 +16,6 @@ export default class EditMember extends React.Component {
       fullname: e.target.fullname.value, 
       phone: e.target.phone.value,  
     }
-    console.log(memberEdit, memberid)
     fetch(`${config.API_ENDPOINT}/members/${memberid}`, {
       method: 'PATCH',
       headers: {
@@ -49,15 +44,15 @@ export default class EditMember extends React.Component {
         <h2>Update your info</h2>
         <div>
           <label htmlFor='gishname'>Gish Name</label>
-          <input type='text' name='gishname' defaultValue={member.gishname}/>
+          <input type='text' name='gishname' defaultValue={member.gishname} required/>
         </div>
         <div>
           <label htmlFor='fullname'>Full Name</label>
-          <input type='text' name='fullname' defaultValue={member.fullname}/>
+          <input type='text' name='fullname' defaultValue={member.fullname} required/>
         </div>
         <div>
           <label htmlFor='phone'>Phone</label>
-          <input type='text' name='phone' defaultValue={member.phone}/>
+          <input type='text' name='phone' defaultValue={member.phone} />
         </div>
         <div>
         <button type='reset'>

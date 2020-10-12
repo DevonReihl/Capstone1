@@ -4,6 +4,12 @@ import config from '../config'
 import './AddMember.css'
 
 export default class AddMember extends React.Component {
+  static defaultProps = {
+    history: {
+      push: () => { }
+    },
+  }
+  
   static contextType = ApiContext;
 
   handleAddMember = e => {
@@ -25,8 +31,9 @@ export default class AddMember extends React.Component {
       if(!res.ok)
       return res.json().then(e => Promise.reject(e))
     })
-    .then(member => {
-      this.context.addMember(member)
+    .then( () => {
+      this.context.addMember({...newMember})
+      this.props.history.push('/')
     })
     .catch(error => {
       console.error({ error })
@@ -40,11 +47,11 @@ export default class AddMember extends React.Component {
         <h2>Add new member</h2>
         <div>
           <label htmlFor='gishname'>Gish Name</label>
-          <input type='text' name='gishname'/>
+          <input type='text' name='gishname' minlength='5' required/>
         </div>
         <div>
           <label htmlFor='fullname'>Full Name</label>
-          <input type='text' name='fullname'/>
+          <input type='text' name='fullname' minlength='5' required/>
         </div>
         <div>
           <label htmlFor='phone'>Phone</label>
