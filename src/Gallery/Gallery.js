@@ -147,7 +147,7 @@ function Gallery() {
     const [toggler, setToggler] = useState(false);
  
     return (
-        <>
+        <section>
             
             <button onClick={ () => setToggler(!toggler) }>
               <img src={MishaCollins} alt="Misha Collins"/>
@@ -155,36 +155,35 @@ function Gallery() {
             </button>
             <FsLightbox
                 toggler={ toggler }
-                sources={ [
-                    
-'https://www.youtube.com/embed/jn5XrI-CuWE',
-'https://i.imgur.com/CMdhOHi.jpg',
-'https://www.youtube.com/embed/CobyPnbQp08',
-'https://i.imgur.com/wUq96Km.jpg',
-'https://www.youtube.com/embed/KoelVD7GP3I',
-'https://i.imgur.com/sqZj8cx.jpg',
-'https://www.youtube.com/embed/s79RnuTBkdw',
-'https://i.imgur.com/aEg9IKN.jpg',
-'https://www.youtube.com/embed/Lt5PCAU5sS8',
-'https://i.imgur.com/MQNOcLx.jpg',
-'https://www.youtube.com/embed/MJCqJSq1RDc',
-'https://i.imgur.com/KZNVVam.jpg',
-'https://www.youtube.com/embed/axTbnSe527Q',
-'https://i.imgur.com/0NUJ00b.jpg',
-'https://www.youtube.com/embed/Pgd5UO_phhc',
-'https://i.imgur.com/XwAxEL7.jpg',
-'https://www.youtube.com/embed/i_7cvm-gYyg',
-'https://i.imgur.com/GBZOrS7.jpg',
-'https://www.youtube.com/embed/gNWnwEAqtR0',
-'https://i.imgur.com/UJEQ7ez.jpg',
-'https://www.youtube.com/embed/bzaab85YjSo',
-'https://i.imgur.com/A3WDgjv.jpg',
-'https://www.youtube.com/embed/6lEgDCHqn3Y',
-'https://i.imgur.com/s1HcP9G.jpg',
-'https://www.youtube.com/embed/bFD2fcwPRzk'
+                sources={ [        
+                    'https://www.youtube.com/embed/jn5XrI-CuWE',
+                    'https://i.imgur.com/CMdhOHi.jpg',
+                    'https://www.youtube.com/embed/CobyPnbQp08',
+                    'https://i.imgur.com/wUq96Km.jpg',
+                    'https://www.youtube.com/embed/KoelVD7GP3I',
+                    'https://i.imgur.com/sqZj8cx.jpg',
+                    'https://www.youtube.com/embed/s79RnuTBkdw',
+                    'https://i.imgur.com/aEg9IKN.jpg',
+                    'https://www.youtube.com/embed/Lt5PCAU5sS8',
+                    'https://i.imgur.com/MQNOcLx.jpg',
+                    'https://www.youtube.com/embed/MJCqJSq1RDc',
+                    'https://i.imgur.com/KZNVVam.jpg',
+                    'https://www.youtube.com/embed/axTbnSe527Q',
+                    'https://i.imgur.com/0NUJ00b.jpg',
+                    'https://www.youtube.com/embed/Pgd5UO_phhc',
+                    'https://i.imgur.com/XwAxEL7.jpg',
+                    'https://www.youtube.com/embed/i_7cvm-gYyg',
+                    'https://i.imgur.com/GBZOrS7.jpg',
+                    'https://www.youtube.com/embed/gNWnwEAqtR0',
+                    'https://i.imgur.com/UJEQ7ez.jpg',
+                    'https://www.youtube.com/embed/bzaab85YjSo',
+                    'https://i.imgur.com/A3WDgjv.jpg',
+                    'https://www.youtube.com/embed/6lEgDCHqn3Y',
+                    'https://i.imgur.com/s1HcP9G.jpg',
+                    'https://www.youtube.com/embed/bFD2fcwPRzk'
                 ] }
             />
-        </>
+        </section>
     );
 }
 

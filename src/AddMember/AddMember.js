@@ -47,11 +47,11 @@ export default class AddMember extends React.Component {
         <h2>Add new member</h2>
         <div>
           <label htmlFor='gishname'>Gish Name</label>
-          <input type='text' name='gishname' minlength='5' required/>
+          <input type='text' name='gishname' minLength='5' required/>
         </div>
         <div>
           <label htmlFor='fullname'>Full Name</label>
-          <input type='text' name='fullname' minlength='5' required/>
+          <input type='text' name='fullname' minLength='8' required/>
         </div>
         <div>
           <label htmlFor='phone'>Phone</label>
