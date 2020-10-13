@@ -67,8 +67,6 @@ class App extends Component {
       })
   };
 
-  //update item
-
   //delete item
   deleteItem = itemId => {
     this.setState({
@@ -80,10 +78,8 @@ class App extends Component {
     const value = {
       members: this.state.members,
       items: this.state.items,
-      addItem: this.addItem,
       addMember: this.addMember,
       deleteItem: this.deleteItem,
-      updateItem: this.updateItem,
       updateMember: this.updateMember,
     }
 
@@ -100,7 +96,6 @@ class App extends Component {
           <Route exact path='/members/:memberId/todo' component= {Todo} />
           <Route exact path='/members/:memberId' component= {MemberInfo} />
           <Route exact path='/members/edit/:memberId' component= {EditMember} />
-          <Route path='/items/add' component= {AddItem} />
           <Route path='/add-member' component= {AddMember} />
           
         </main>
