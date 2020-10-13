@@ -12,7 +12,6 @@ import HomeImage from '../HomeImage/HomeImage'
 import MemberInfo from '../MemberInfo/MemberInfo'
 import EditMember from '../EditMember/EditMember'
 import AddMember from '../AddMember/AddMember'
-import AddItem from '../AddItem/AddItem'
 import ApiContext from '../ApiContext'
 import config from '../config'
 
