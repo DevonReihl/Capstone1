@@ -11,9 +11,8 @@ export default class Todo extends React.Component {
   }
   static contextType = ApiContext;
 
-  handleClickDelete = (e, itemid) => {
+  handleClickDeleteItem = (e, itemid) => {
     e.preventDefault()
-    console.log('HELP ME DELETE?!?', itemid)
 
     fetch(`${config.API_ENDPOINT}/items/${itemid}`, {
       method: 'DELETE',
@@ -24,11 +23,9 @@ export default class Todo extends React.Component {
     .then(res => {
       if(!res.ok)
         return res.json().then(e => Promise.reject(e))
-        // return res.json()
     })
     .then(() => {
       this.context.deleteItem(itemid)
-      // this.onDeleteItem(itemid)
     })
     .catch(error => {
       console.error({ error })
@@ -55,7 +52,7 @@ export default class Todo extends React.Component {
               <button
               className='Item-delete'
               type='button'
-              onClick= { e => this.handleClickDelete(e, item.id)}>
+              onClick= { e => this.handleClickDeleteItem(e, item.id)}>
                 Delete
               </button><hr/> 
             </li>

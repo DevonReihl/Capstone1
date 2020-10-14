@@ -19,7 +19,6 @@ export default class AddMember extends React.Component {
       fullname: e.target.fullname.value, 
       phone: e.target.phone.value,
     }
-    console.log('YOU CAN ADD NOW', newMember)
     fetch(`${config.API_ENDPOINT}/members`, {
       method: 'POST',
       headers: {
@@ -33,9 +32,8 @@ export default class AddMember extends React.Component {
       return res.json()
     })
     .then( (mem) => {
-      console.log(mem, newMember)
       this.context.addMember(mem)
-      this.props.history.push('/')
+      this.props.history.push('/members')
     })
     .catch(error => {
       console.error({ error })

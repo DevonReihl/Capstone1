@@ -5,7 +5,7 @@ import './EditMember.css'
 
 export default class EditMember extends React.Component {
   static defaultProps = {
-    onUpdateItem: () => {},
+    onUpdateMember: () => {},
   } 
   static contextType = ApiContext;
 
@@ -36,6 +36,28 @@ export default class EditMember extends React.Component {
     })
   }
 
+  handleClickDeleteMember = (e, memberid) => {
+    e.preventDefault()
+
+    fetch(`${config.API_ENDPOINT}/members/${memberid}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+    })
+    .then(res => {
+      if(!res.ok)
+        return res.json().then(e => Promise.reject(e))
+    })
+    .then(() => {
+      this.context.deleteMember(memberid)
+      this.props.history.push('/members')
+    })
+    .catch(error => {
+      console.error({ error })
+    })
+  }
+
   render() {
     const { memberId } = this.props.match.params
     // eslint-disable-next-line
@@ -56,9 +78,12 @@ export default class EditMember extends React.Component {
           <input type='text' name='phone' size='20' defaultValue={member.phone} />
         </div>
         <div>
-        <button type='reset'aria-label="Center Align">
-            Cancel
-        </button>
+        <button
+              className='Member-delete'
+              type='button'
+              onClick= { e => this.handleClickDeleteMember(e, member.id)}>
+                Delete
+              </button>
         <button type='submit'aria-label="Center Align">
             Save
         </button>

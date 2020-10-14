@@ -11,7 +11,9 @@ import Footer from '../Footer/Footer'
 import HomeImage from '../HomeImage/HomeImage'
 import MemberInfo from '../MemberInfo/MemberInfo'
 import EditMember from '../EditMember/EditMember'
+import EditItem from '../EditItem/EditItem'
 import AddMember from '../AddMember/AddMember'
+import AddItem from '../AddItem/AddItem'
 import ApiContext from '../ApiContext'
 import config from '../config'
 
@@ -56,6 +58,16 @@ class App extends Component {
       ]
     })
   }
+
+  //add item
+  addItem = item => {
+    this.setState({
+      items: [
+        ...this.state.items,
+        item
+      ]
+    })
+  }
   //update member
   updateMember = member => {
     const newMembers = this.state.members.map(mem =>
@@ -67,6 +79,18 @@ class App extends Component {
       })
   };
 
+  updateItem = item => {
+    console.log(item)
+    const newItems = this.state.items.map(it =>
+      // eslint-disable-next-line
+      (it.id == item.id)
+      ? {...it, ...item} : it)
+      console.log(newItems)
+      this.setState({
+        items: newItems
+      })
+  };
+
   //delete item
   deleteItem = itemId => {
     this.setState({
@@ -75,13 +99,25 @@ class App extends Component {
     })
   }
 
+   //delete member
+   deleteMember = memberId => {
+    this.setState({
+      // eslint-disable-next-line
+      members: this.state.members.filter(member => member.id !== memberId)
+    })
+  }
+
   render(){
     const value = {
       members: this.state.members,
       items: this.state.items,
       addMember: this.addMember,
+      addItem: this.addItem,
       deleteItem: this.deleteItem,
+      deleteMember: this.deleteMember,
       updateMember: this.updateMember,
+      updateItem: this.updateItem,
+      
     }
 
     return (
@@ -97,7 +133,9 @@ class App extends Component {
           <Route exact path='/members/:memberId/todo' component= {Todo} />
           <Route exact path='/members/:memberId' component= {MemberInfo} />
           <Route exact path='/members/edit/:memberId' component= {EditMember} />
+          <Route path='/item/:itemId' component= {EditItem} />
           <Route path='/add-member' component= {AddMember} />
+          <Route path='/add-item' component= {AddItem} />
           
         </main>
         <Footer />
