@@ -26,7 +26,6 @@ export default class Members extends React.Component {
               </Link>
               <Link to={`/members/${member.id}`}>
                 <button>View member info</button>
-                {/* View member info */}
               </Link>
             </li> 
           )}

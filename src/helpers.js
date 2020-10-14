@@ -7,5 +7,6 @@ export const findItem = (items=[], itemId) => {
 }
 
 export const getItemsForMember = (items=[], memberId) => (
+  // eslint-disable-next-line
   (!memberId) ? items : items.filter(item => item.memberId == memberId)
 )

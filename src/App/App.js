@@ -59,6 +59,7 @@ class App extends Component {
   //update member
   updateMember = member => {
     const newMembers = this.state.members.map(mem =>
+      // eslint-disable-next-line
       (mem.id == member.id)
       ? member : mem)
       this.setState({
@@ -69,6 +70,7 @@ class App extends Component {
   //delete item
   deleteItem = itemId => {
     this.setState({
+      // eslint-disable-next-line
       items: this.state.items.filter(item => item.id !== itemId)
     })
   }

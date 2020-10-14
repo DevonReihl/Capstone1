@@ -41,7 +41,7 @@ export default class Todo extends React.Component {
     const myHunt = getItemsForMember(items, memberId)
 
     return (
-      <section>
+      <section className='list'>
         <div>
           <h2> My Hunt</h2>
         </div>

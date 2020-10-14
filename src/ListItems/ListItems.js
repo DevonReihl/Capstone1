@@ -14,7 +14,7 @@ export default class Todo extends React.Component {
   render() {
     const { items=[] } = this.context
     return (
-      <section>
+      <section className= 'list'>
         <div>
           <h2> GISH hunt</h2>
         </div>

@@ -29,10 +29,12 @@ export default class AddMember extends React.Component {
     })
     .then(res => {
       if(!res.ok)
-      return res.json().then(e => Promise.reject(e))
+        return res.json().then(e => Promise.reject(e))
+      return res.json()
     })
-    .then( () => {
-      this.context.addMember({...newMember})
+    .then( (mem) => {
+      console.log(mem, newMember)
+      this.context.addMember(mem)
       this.props.history.push('/')
     })
     .catch(error => {

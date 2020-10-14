@@ -16,6 +16,7 @@ export default class MemberInfo extends React.Component {
 
   render() {
     const { memberId } = this.props.match.params
+    // eslint-disable-next-line
     const member = this.context.members.find(mem => mem.id == memberId) || { content: '' }
     return (
       <section key={member.id}>

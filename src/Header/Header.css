@@ -6,14 +6,14 @@ body {
   font-family: "Open Sans",
   sans-serif; 
   font-size: 20px;
-  color: #444;
   text-align: center;
   line-height: 1;
 }
 
 header {
   margin-top: 8%;
-  padding: 20px;
+  padding: 15px;
+  width: 100%;
   text-align: center;
   background: #102b57;
   color: white;

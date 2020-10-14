@@ -1,6 +1,6 @@
 nav{
   padding: 1% 0;
-  background-color: #aaa;
+  background-color: rgb(206, 204, 204);
 }
 
 nav {
@@ -15,17 +15,18 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #aaa;
+  background-color: rgb(206, 204, 204);
 }
 
-li {
+nav li {
   float: right;
-  border-left:1px solid #bbb;
+  font-size: 110%;
+  border-left:1px solid rgb(206, 204, 204);
 }
 
 li a {
   display: block;
-  color: blue;
+  color: #000052;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
