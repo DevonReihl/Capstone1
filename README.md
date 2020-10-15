@@ -10,7 +10,7 @@ In it the leader can add and update items as needed. They can also add update an
 members of the team. Each member has a list of items which is where the leader can delete 
 the items as members complete them.
 
-![Landing page](https://imgur.com/a/YyIQhiY)
+![Landing page](https://imgur.com/mn4qViz)
 
 ![This is a complete list of all hunt items with ability to add and edit items](https://imgur.com/a/XncMvHN )
 https://imgur.com/a/XncMvHN (hunt view)
