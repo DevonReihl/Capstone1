@@ -5,14 +5,12 @@ https://gish-client-r1oa2229v.vercel.app/
 https://github.com/DevonReihl/Capstone1-server
 
 This is my first capstone react client, 
-In a user can browse at a photo/video gallery as well as learn more about GISH.
-Members can update their info and new members can be added. 
-Members can delete their person list items and add new items to their list.
+This app is for the leader of team Literacy Bandits, organized by GISH. 
+In it the leader can add and update items as needed. They can also add update and delete 
+members of the team. Each member has a list of items which is where the leader can delete 
+the items as members complete them.
+
+https://imgur.com/a/6R2LW1p
 
 
-
-Screenshot(s) of your app. This makes your app description much easier to understand. 
-
-
-
-For this Capstone I used React, CSS, Node, Express, and PostgreSQL (as well as FsLightbox) 
+For this Capstone I used React, CSS, Node, Express, and PostgreSQL
