@@ -80,12 +80,10 @@ class App extends Component {
   };
 
   updateItem = item => {
-    console.log(item)
     const newItems = this.state.items.map(it =>
       // eslint-disable-next-line
       (it.id == item.id)
       ? {...it, ...item} : it)
-      console.log(newItems)
       this.setState({
         items: newItems
       })

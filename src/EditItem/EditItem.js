@@ -40,28 +40,6 @@ export default class EditItem extends React.Component {
     })
   }
 
-  // handleClickDeleteItem = (e, itemid) => {
-  //   e.preventDefault()
-
-  //   fetch(`${config.API_ENDPOINT}/items/${itemid}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'content-type': 'application/json'
-  //     },
-  //   })
-  //   .then(res => {
-  //     if(!res.ok)
-  //       return res.json().then(e => Promise.reject(e))
-  //   })
-  //   .then(() => {
-  //     this.context.deleteItem(itemid)
-  //     this.props.history.push('/items')
-  //   })
-  //   .catch(error => {
-  //     console.error({ error })
-  //   })
-  // }
-
   render() {
     const { members=[] } = this.context
     const { itemId } = this.props.match.params
