@@ -10,7 +10,15 @@ In it the leader can add and update items as needed. They can also add update an
 members of the team. Each member has a list of items which is where the leader can delete 
 the items as members complete them.
 
-https://imgur.com/a/6R2LW1p
+https://imgur.com/a/YyIQhiY (Landing)
 
+https://imgur.com/a/XncMvHN (hunt view)
+
+https://imgur.com/a/6JERlsv (member view)
+
+https://imgur.com/a/pmSuVTB (member hunt view)
+
+
+https://imgur.com/a/YyIQhiY (complete rundown for presentation)
 
 For this Capstone I used React, CSS, Node, Express, and PostgreSQL
