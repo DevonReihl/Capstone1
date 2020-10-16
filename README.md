@@ -1,6 +1,6 @@
 # GISH literacy bandit app
 
-https://gish-client-r1oa2229v.vercel.app/
+https://gish-client.vercel.app/
 
 https://github.com/DevonReihl/Capstone1-server
 
