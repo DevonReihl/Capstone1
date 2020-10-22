@@ -12,15 +12,17 @@ body {
 }
 
 section {
-  display: table;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  min-height: 200px;
   padding: 6% 0;
   background-color: whitesmoke;
 }
 
-div.gallery iframe {
-  width: 100%;
+iframe {
+  width: 220px;
+  height: fit-content;
 }
 
 div.gallery {
@@ -29,7 +31,7 @@ div.gallery {
   margin: 5px;
   border: 1px solid #ccc;
   float: left;
-  width: 180px;
+  width: 250px;
 }
 
 div.gallery:hover {
@@ -38,17 +40,17 @@ div.gallery:hover {
 
 div.gallery img {
   width: 100%;
+  /* height: auto; */
 }
 
 div.desc {
   padding: 15px;
   text-align: center;
-  width: 100%
 }
 
 @media only screen and (max-width: 600px) {
-  div.gallery { 
-    display: block;
+  .col { 
+    display: flex;
     width: 100%;
   }
 }

@@ -23,7 +23,7 @@ export default class Todo extends React.Component {
         <div><Link to={`/add-Item`}>
             <button>Add Item</button>
         </Link></div>
-        <ul>
+        <ul className='float'>
         {items.map(item =>
             <li key={item.id}>
               Item #{item.id}

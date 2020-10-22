@@ -6,7 +6,7 @@ import './Gallery.css'
 export default class Gallery extends React.Component {
   render() {
     return (
-      <section>
+      <section className='container flex'>
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/jn5XrI-CuWE" allowFullScreen/>
           <div className="desc">2020 Social distancing, Choreographed "Don't Stand so Close To Me"</div>
