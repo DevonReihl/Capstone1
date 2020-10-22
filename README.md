@@ -1,6 +1,6 @@
 # GISH literacy bandit app
 
-https://gish-client-r1oa2229v.vercel.app/
+https://gish-client.vercel.app/
 
 https://github.com/DevonReihl/Capstone1-server
 
@@ -10,7 +10,7 @@ In it the leader can add and update items as needed. They can also add update an
 members of the team. Each member has a list of items which is where the leader can delete 
 the items as members complete them.
 
-https://imgur.com/a/YyIQhiY (Landing)
+https://imgur.com/mn4qViz (Landing page)
 
 https://imgur.com/a/XncMvHN (hunt view)
 
