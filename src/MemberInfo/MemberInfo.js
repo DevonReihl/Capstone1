@@ -21,11 +21,11 @@ export default class MemberInfo extends React.Component {
     return (
       <section key={member.id}>
         <div>
-          <h2> {member.gishname}</h2>
+          <h2> {member.gish_name}</h2>
         </div>
         <ul>
             <li >
-              <div>{member.fullname}</div>
+              <div>{member.full_name}</div>
               <div>{member.phone}</div>
               <Link
               to={`/members/edit/${member.id}`}

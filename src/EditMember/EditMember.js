@@ -12,8 +12,8 @@ export default class EditMember extends React.Component {
   handleUpdateMember = (e, memberid) => {
     e.preventDefault()
     const memberEdit = {
-      gishname: e.target.gishname.value,
-      fullname: e.target.fullname.value, 
+      gish_name: e.target.gish_name.value,
+      full_name: e.target.full_name.value, 
       phone: e.target.phone.value,  
     }
     fetch(`${config.API_ENDPOINT}/members/${memberid}`, {
@@ -66,12 +66,12 @@ export default class EditMember extends React.Component {
       <form onSubmit={e => this.handleUpdateMember(e, memberId)}>
         <h2>Update your info</h2>
         <div>
-          <label htmlFor='gishname' name='gishname' id='gishname'>Gish Name</label>
-          <input type='text' name='gishname' defaultValue={member.gishname} required/>
+          <label htmlFor='gish_name' name='gish_name' id='gish_name'>Gish Name</label>
+          <input type='text' name='gish_name' defaultValue={member.gish_name} required/>
         </div>
         <div>
-          <label htmlFor='fullname' name='fullname' id='fullname'>Full Name</label>
-          <input type='text' name='fullname' defaultValue={member.fullname} required/>
+          <label htmlFor='full_name' name='full_name' id='full_name'>Full Name</label>
+          <input type='text' name='full_name' defaultValue={member.full_name} required/>
         </div>
         <div>
           <label htmlFor='phone' name='phone' id='phone'>Phone</label>

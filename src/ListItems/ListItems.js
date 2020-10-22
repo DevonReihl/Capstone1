@@ -27,9 +27,9 @@ export default class Todo extends React.Component {
         {items.map(item =>
             <li key={item.id}>
               Item #{item.id}
-              <div>Item name: {item.itemName}</div>
-              <div>Item desc: {item.itemText}</div>
-              <div>Item type: {item.itemType}</div>
+              <div>Item name: {item.item_name}</div>
+              <div>Item desc: {item.item_text}</div>
+              <div>Item type: {item.item_type}</div>
               <div>Points: {item.points}</div>
               <Link to={`/item/${item.id}`}><button>Edit Item</button></Link>
             </li>

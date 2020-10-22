@@ -12,11 +12,11 @@ export default class EditItem extends React.Component {
   handleUpdateItem = (e, itemid) => {
     e.preventDefault()
     const itemEdit = {
-      itemname: e.target['itemname'].value,
-      itemtext: e.target['itemtext'].value, 
-      itemtype: e.target['itemtype'].value,
+      item_name: e.target['item_name'].value,
+      item_text: e.target['item_text'].value, 
+      item_type: e.target['item_type'].value,
       points: e.target['points'].value,
-      memberid: e.target['note-member-id'].value,  
+      member_id: e.target['note-member-id'].value,  
     }
     
     fetch(`${config.API_ENDPOINT}/items/${itemid}`, {
@@ -50,16 +50,16 @@ export default class EditItem extends React.Component {
       <form onSubmit={e => this.handleUpdateItem(e, itemId)}>
         <h2>Update your info</h2>
         <div>
-          <label htmlFor='itemname'>Gish Item</label>
-          <input type='text' name='itemname' defaultValue={item.itemName} required/>
+          <label htmlFor='item_name'>Gish Item</label>
+          <input type='text' name='item_name' defaultValue={item.item_name} required/>
         </div>
         <div>
-          <label htmlFor='itemtext'>Description</label>
-          <input type='text' name='itemtext' defaultValue={item.itemText} required/>
+          <label htmlFor='item_text'>Description</label>
+          <input type='text' name='item_text' defaultValue={item.item_text} required/>
         </div>
         <div>
-          <label htmlFor='itemtype'>Type (image or video)</label>
-          <input type='text' name='itemtype' defaultValue={item.itemType} />
+          <label htmlFor='item_type'>Type (image or video)</label>
+          <input type='text' name='item_type' defaultValue={item.item_type} />
         </div>
         <div>
           <label htmlFor='points'>Points</label>
@@ -68,7 +68,7 @@ export default class EditItem extends React.Component {
         <select id='note-member-select' name='note-member-id'>
           {members.map(member =>
             <option key={member.id} value={member.id}>
-              {member.gishname}
+              {member.gish_name}
             </option>
           )}
         </select>

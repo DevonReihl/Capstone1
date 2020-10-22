@@ -45,9 +45,9 @@ export default class Todo extends React.Component {
         <ul>
         {myHunt.map(item =>
             <li key={item.id}>
-              <div>Item name: {item.itemName}</div>
-              <div>Item desc: {item.itemText}</div>
-              <div>Item type: {item.itemType}</div>
+              <div>Item name: {item.item_name}</div>
+              <div>Item desc: {item.item_text}</div>
+              <div>Item type: {item.item_type}</div>
               <div>Points: {item.points}</div>
               <button
               className='Item-delete'

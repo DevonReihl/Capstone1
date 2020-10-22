@@ -1,6 +1,7 @@
 import React from 'react'
 import ApiContext from '../ApiContext'
 import config from '../config'
+import { Link } from 'react-router-dom'
 import './AddMember.css'
 
 export default class AddMember extends React.Component {
@@ -15,8 +16,8 @@ export default class AddMember extends React.Component {
   handleAddMember = e => {
     e.preventDefault()
     const newMember = {
-      gishname: e.target.gishname.value,
-      fullname: e.target.fullname.value, 
+      gish_name: e.target.gish_name.value,
+      full_name: e.target.full_name.value, 
       phone: e.target.phone.value,
     }
     fetch(`${config.API_ENDPOINT}/members`, {
@@ -46,21 +47,23 @@ export default class AddMember extends React.Component {
       <form  onSubmit={this.handleAddMember}>
         <h2>Add new member</h2>
         <div>
-          <label htmlFor='gishname'>Gish Name</label>
-          <input type='text' name='gishname' minLength='5' required/>
+          <label htmlFor='gish_name'>Gish Name</label>
+          <input type='text' name='gish_name' minLength='5' required/>
         </div>
         <div>
-          <label htmlFor='fullname'>Full Name</label>
-          <input type='text' name='fullname' minLength='8' required/>
+          <label htmlFor='full_name'>Full Name</label>
+          <input type='text' name='full_name' minLength='8' required/>
         </div>
         <div>
           <label htmlFor='phone'>Phone</label>
           <input type='text' name='phone'/>
         </div>
         <div>
-        <button type='reset'>
+        <Link to={`/members`}>
+          <button type='reset'>
             Cancel
-        </button>
+          </button>
+        </Link>
         <button type='submit'>
             Save
         </button>

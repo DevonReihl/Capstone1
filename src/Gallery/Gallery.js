@@ -28,98 +28,100 @@ export default class Gallery extends React.Component {
           <div className="desc">Backwards poem (seriously play it backwards)</div>
         </div>
         <div className="gallery">
-            <img src='https://i.imgur.com/aEg9IKN.jpg' alt="Monster under the bed"/>
-          <div className="desc">Item #12 A child reading a bedtime story to the monster under their bed. The monster 
-            should be charmed and cozy and cuddled up.</div>
-        </div>
-
-        <div className="gallery">
-          <Iframe url="https://www.youtube.com/embed/s79RnuTBkdw" allowFullScreen />
-          <div className="desc">2018 Item #157 Watermelon Fishing</div>
-        </div>
-        <div className="gallery">
-            <img src='https://i.imgur.com/MQNOcLx.jpg' alt="Jensen skittle pie"/>
-          <div className="desc">Item #70 - Over the years, Jensen Ackles has been depicted in Skittles, 
-            but we all know his character Dean loves pie. Let's do a crossover: Bake a Skittles pie with a portrait of 
-            Jensen baked into the upper crust</div>
-        </div>
-        <div className="gallery">
-          <Iframe url="https://www.youtube.com/embed/Lt5PCAU5sS8" allowFullScreen/>
-          <div className="desc">Item 62 Nothings"s more annying than cracking an egg over the campfire and getting 
-            shells in the pan. But now with new, patent-pending GISHCORP Zippable Eggs, it's no longer a problem!</div>
-        </div>
-        <div className="gallery">
-            <img src='https://i.imgur.com/KZNVVam.jpg' alt="where no man has stepped before"/>
-          <div className="desc">Item #120: Neil Armstrong stepped on to the Moon 50 years ago. To memorialize this 
-          amazing achievement, make your own “One Small Step” monument.</div>
-        </div>
-        <div className="gallery">
-          <Iframe url="https://www.youtube.com/embed/MJCqJSq1RDc" allowFullScreen/>
-          <div className="desc">Fire station relief</div>
-        </div>
-        <div className="gallery">
-            <img src='https://i.imgur.com/0NUJ00b.jpg' alt="Jared Marshmellow"/>
-          <div className="desc">Item# 68: I’m not saying Jared Padalecki is a big softie, 
-            but here’s a portrait of him toasted onto a marshmallow. Just the way it should be.</div>
-        </div>
-        <div className="gallery">
-          <Iframe url="https://www.youtube.com/embed/axTbnSe527Q" allowFullScreen/>
-          <div className="desc">Item 100: Write a phrase on a piece of wood of something negative you say 
-            about yourself to silence yourself. Burn the wood and use the ashes to write something affirming.</div>
-        </div>
-        <div className="gallery">
-            <img src='https://i.imgur.com/XwAxEL7.jpg' alt="Fishing for Complements"/>
+            <img src='https://i.imgur.com/0NUJ00b.jpg' alt="Fishing for Complements"/>
           <div className="desc">Item #196: You've been out fishing for compliments, and you just snagged a whopper.</div>
         </div>
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/Pgd5UO_phhc" allowFullScreen/>
           <div className="desc">2018 Item #105 Head Shoulders Knees and Toes</div>
         </div>
+        
         <div className="gallery">
-            <img src='https://i.imgur.com/GBZOrS7.jpg' alt="Workspace for a spider"/>
-            <div className="desc">Item #76 "Not all insects aspire to just be insects. Without harming 
-              it, get insect to sit on a sheet of paper and doodle an environment around it showing it at its job or hobby."</div>
+            <img src='https://i.imgur.com/sqZj8cx.jpg' alt="Monster under the bed"/>
+          <div className="desc">Item #12 A child reading a bedtime story to the monster under their bed. The monster 
+            should be charmed and cozy and cuddled up.</div>
+        </div>
+        <div className="gallery">
+          <Iframe url="https://www.youtube.com/embed/s79RnuTBkdw" allowFullScreen />
+          <div className="desc">2018 Item #157 Watermelon Fishing</div>
+        </div>
+        <div className="gallery">
+            <img src='https://i.imgur.com/aEg9IKN.jpg' alt="Jensen skittle pie"/>
+          <div className="desc">Item #70 Jensen Ackles has been depicted in Skittles, and his character Dean loves pie. 
+            Let's do a crossover: Bake a Skittles pie with a portrait of Jensen</div>
+        </div>
+        <div className="gallery">
+          <Iframe url="https://www.youtube.com/embed/Lt5PCAU5sS8" allowFullScreen/>
+          <div className="desc">Item #62 Nothings's more annoying than cracking an egg and getting 
+            shells in the pan. Patent-pending GISHCORP Zippable Eggs, it's no longer a problem!</div>
+        </div>
+        <div className="gallery">
+            <img src='https://i.imgur.com/MQNOcLx.jpg' alt="where no man has stepped before"/>
+          <div className="desc">Item #120: Neil Armstrong stepped on to the Moon 50 years ago. To memorialize this 
+          amazing achievement, make your own “One Small Step” monument. lets see the footprint</div>
+        </div>
+        <div className="gallery">
+          <Iframe url="https://www.youtube.com/embed/MJCqJSq1RDc" allowFullScreen/>
+          <div className="desc">Look Misha, we made the news! Suprise party for a Fire station. Thank them for all they do.</div>
+        </div>
+        <div className="gallery">
+            <img src='https://i.imgur.com/KZNVVam.jpg' alt="Jared Marshmellow"/>
+          <div className="desc">Item #68: I’m not saying Jared Padalecki is a big softie, 
+            but here’s a portrait of him toasted onto a marshmallow. Just the way it should be.</div>
+        </div>
+        <div className="gallery">
+          <Iframe url="https://www.youtube.com/embed/axTbnSe527Q" allowFullScreen/>
+          <div className="desc">Item #100: Write a phrase on a piece of wood of something negative you say 
+            about yourself. Burn it and use the ashes to write something affirming.</div>
+        </div>
+        <div className="gallery">
+            <img src='https://i.imgur.com/GBZOrS7.jpg' alt="Oregon State bird"/>
+            <div className="desc">Item #124: Take a picture of yourself dressed as your state bird holding 
+              your state flower.</div>
         </div>
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/i_7cvm-gYyg" allowFullScreen/>
           <div className="desc">Dispense Pudding from 5 feet away</div>
         </div>
         <div className="gallery">
-            <img src='https://i.imgur.com/UJEQ7ez.jpg' alt="Oregon State bird"/>
-            <div className="desc">Item 124: Take a picture of yourself dressed as your state bird holding 
-              your state flower.</div>
+            <img src='https://i.imgur.com/XwAxEL7.jpg' alt="Workspace for a spider"/>
+            <div className="desc">Item #76 "Not all insects aspire to just be insects. Without harming 
+              it, get insect to sit on a sheet of paper and doodle an environment around it showing it at its job or hobby."</div>
         </div>
+        
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/gNWnwEAqtR0" allowFullScreen/>
           <div className="desc">2018 Item #178 Get strangers to sing</div>
         </div>
+        
         <div className="gallery">
-            <img src='https://i.imgur.com/A3WDgjv.jpg' alt="Baked shoes"/>
-            <div className="desc">#100 Let’s see a freshly baked pair of “high-top shoes” made 
-              entirely of freshly baked bread. Prove that they fit your feet perfectly.</div>
-        </div>
-        <div className="gallery">
-          <Iframe url="https://www.youtube.com/embed/bzaab85YjSo" allowFullScreen/>
-          <div className="desc">2018 item #89 Robot Lipstick</div>
-        </div>
-        <div className="gallery">
-            <img src='https://i.imgur.com/A3WDgjv.jpg' alt="Clootie Dumpling"/>
+            <img src='https://i.imgur.com/Lv6O1VH.jpg' alt="Relief station"/>
             <div className="desc">Item #69 Go to your local fire station dressed as a dalmatian or Smokey the Bear and create a relaxation station to thank them for their work.</div>
         </div>
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/6lEgDCHqn3Y" allowFullScreen/>
-          <div className="desc">Item 178: When you want to say something sweet to your loved one, 
+          <div className="desc">Item #178: When you want to say something sweet to your loved one, 
             you always use s’mores code.</div>
         </div>
         <div className="gallery">
-            <img src='https://i.imgur.com/s1HcP9G.jpg' alt="Toilet paper facebook"/>
-            <div className="desc">#56: A lot of people use their cell phones while in the bathroom, 
-              which is really gross. Re-create a verified social media account on a roll of toilet 
-              paper- images and all. </div>
-        </div>
+            <img src='https://i.imgur.com/UJEQ7ez.jpg' alt="Baked shoes"/>
+            <div className="desc">Item #100 Let’s see a freshly baked pair of “high-top shoes” made 
+              entirely of freshly baked bread. Prove that they fit your feet perfectly.</div>
+        </div> 
         <div className="gallery">
           <Iframe url="https://www.youtube.com/embed/bFD2fcwPRzk" allowFullScreen/>
           <div className="desc">Make up a word and give it a definition worthy of being added to Websters dictionary</div>
+        </div>
+        
+        <div className="gallery">
+            <img src='https://i.imgur.com/s1HcP9G.jpg' alt="Toilet paper facebook"/>
+            <div className="desc">Item #56: A lot of people use their cell phones while in the bathroom, 
+              which is really gross. Re-create a verified social media account on a roll of toilet 
+              paper- images and all. </div>
+        </div>      
+        <div className="gallery">
+          <Iframe url="https://www.youtube.com/embed/bzaab85YjSo" allowFullScreen/>
+          <div className="desc">2018 item #89 Robot Lipstick</div>
         </div>
       </section>
     )
