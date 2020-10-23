@@ -10,11 +10,11 @@ In it the leader can add and update items as needed. They can also add update an
 members of the team. Each member has a list of items which is where the leader can delete 
 the items as members complete them.
 
-![Landing page](https://i.imgur.com/6ZkP6ld.png)
+![Landing page](https://i.imgur.com/6ZkP6ld.png) Landing page shows a cute image and tells users what this app is for (however this app is designed to not be used b general public)
 
-![hunt view](https://i.imgur.com/2WjO5o2.png)
+![hunt view](https://i.imgur.com/q0rfGY6.png) This view shows how the list of items appears, this is duplicated in the members individual hunt items
 
-![member view](https://i.imgur.com/1wXELaF.png)
+![member view](https://i.imgur.com/R0f6NNt.png) This is the view of the list of members
 
 
 For this Capstone I used React, CSS, Node, Express, and PostgreSQL
