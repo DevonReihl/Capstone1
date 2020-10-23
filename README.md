@@ -16,5 +16,15 @@ the items as members complete them.
 
 ![member view](https://i.imgur.com/R0f6NNt.png) This is the view of the list of members
 
-
-For this Capstone I used React, CSS, Node, Express, and PostgreSQL
+Technology
+  Front End
+    React
+    Create React App
+    React Router
+    HTML5
+    CSS3 (scratch - no frameworks)
+  Testing
+    Jest (smoke tests)
+    
+Production
+  Deployed via Vercel
