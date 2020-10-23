@@ -10,7 +10,7 @@ In it the leader can add and update items as needed. They can also add update an
 members of the team. Each member has a list of items which is where the leader can delete 
 the items as members complete them.
 
-![Landing page](https://i.imgur.com/NtN7Z4I.png)
+![Landing page](https://i.imgur.com/NtN7Z4I.png =100)
 
 ![hunt view](https://i.imgur.com/2WjO5o2.png)
 
