@@ -1,16 +1,11 @@
-body {
-    font-family: "Open Sans",
-    sans-serif; 
-    font-size: 20px;
-    color: #444;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  section {
-    display: table;
-    width: 100%;
-    height: auto;
+section {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:column;
+    height:auto; 
+    width:100%;
     padding: 6% 0;
     background-color: whitesmoke;
   }
@@ -19,25 +14,10 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     color: black;
-    text-align: center;
-    line-height: 1;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:row;
     margin: 5%;
 }
-
-.float {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.float:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.float-item {
-    float: left;
-}
-  

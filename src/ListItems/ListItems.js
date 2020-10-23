@@ -15,7 +15,7 @@ export default class Todo extends React.Component {
   render() {
     const { items=[] } = this.context
     return (
-      <section className= 'list'>
+      <section >
         <div>
           <h2> GISH hunt</h2>
         </div>
@@ -23,7 +23,7 @@ export default class Todo extends React.Component {
         <div><Link to={`/add-Item`}>
             <button>Add Item</button>
         </Link></div>
-        <ul className='float'>
+        <ul className= 'list'>
         {items.map(item =>
             <li key={item.id}>
               Item #{item.id}
