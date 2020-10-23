@@ -20,8 +20,8 @@ ul {
 
 nav li {
   float: right;
-  font-size: 120%;
-  border-left:1px solid rgb(206, 204, 204);
+  font-size: 100%;
+  border-left:1px solid rgb(129, 128, 128);
 }
 
 li a {
@@ -34,4 +34,26 @@ li a {
 
 li a:hover {
   background-color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+  nav li a:not(:first-child) {display: none;}
+  nav li a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav li.responsive {position: relative;}
+  nav li.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  nav li.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }

@@ -42,7 +42,7 @@ export default class Todo extends React.Component {
         <div>
           <h2> My Hunt</h2>
         </div>
-        <ul>
+        <ul className= 'list'>
         {myHunt.map(item =>
             <li key={item.id}>
               <div>Item name: {item.item_name}</div>
