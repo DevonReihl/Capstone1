@@ -12,13 +12,9 @@ the items as members complete them.
 
 ![Landing page](https://i.imgur.com/NtN7Z4I.png)
 
-https://imgur.com/a/XncMvHN (hunt view)
+![hunt view](https://i.imgur.com/2WjO5o2.png)
 
-https://imgur.com/a/6JERlsv (member view)
+![member view](https://i.imgur.com/1wXELaF.png)
 
-https://imgur.com/a/pmSuVTB (member hunt view)
-
-
-https://imgur.com/a/YyIQhiY (complete rundown for presentation)
 
 For this Capstone I used React, CSS, Node, Express, and PostgreSQL
